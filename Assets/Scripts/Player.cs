@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
 
     public Transform groundCheck;
     private bool isGrounded;
+
     [SerializeField] LayerMask WhatIsGround;
 
     private bool facingRight = true;

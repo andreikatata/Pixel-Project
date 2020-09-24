@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-guid: cdeb8d3afb461f740ad489fed1ee2577
+guid: 9acccfbc9a6d75444a0a857daba11899
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -4029819251187114856
-    second: weapon_0
-  - first:
-      213: -2505125261248690692
-    second: weapon_1
-  - first:
-      213: 2658247228066192599
-    second: weapon_0
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
