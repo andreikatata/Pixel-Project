@@ -20,11 +20,16 @@ public class Player : MonoBehaviour
     private bool facingRight = true;
     private int extraJumps;
     private float moveInput;
+
+
+     private Animator anim; 
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
@@ -33,6 +38,15 @@ public class Player : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, WhatIsGround);
 
         moveInput = Input.GetAxis("Horizontal");
+        if(moveInput == 0)
+        {
+            anim.SetBool("isRunning", false);
+        }
+        else
+        {
+            anim.SetBool("isRunning", true);
+        }
+       
         rb.velocity = new Vector2(moveInput * xSpeed, rb.velocity.y);
 
         if (facingRight == false && moveInput > 0)
